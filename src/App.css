@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+@import url('./var.css');
+
+#app {
+    /* background-color: #444; */
+    /* background-color: var(--theme-c); */
+    /* height: 100vh; */
+    /*
+    https://img.freepik.com/free-vector/realistic-galaxy-background_52683-12122.jpg?t=st=1656949107~exp=1656949707~hmac=65c5ef65b0950473d281248a405527f227513f2e6e3ca91f165608882963768a&w=2000 
+    
+    */
+    background: linear-gradient(rgba(0,0,0,var(--background-opacity)),rgba(0,0,0,var(--background-opacity))),url(https://img.freepik.com/free-vector/realistic-galaxy-background_52683-12122.jpg?t=st=1656949107~exp=1656949707~hmac=65c5ef65b0950473d281248a405527f227513f2e6e3ca91f165608882963768a&w=2000);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#layout {
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#layout-left {
+    flex: 4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#layout-right {
+    flex: 3;
 }
 
-.App-link {
-  color: #61dafb;
+#layout-left,
+#layout-right {
+    /* background-color: #000; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#layout-middle {
+    flex: 9;
+}
+
+
+#avatar{
+    transition: 2.5s all;
+}
+#avatar:hover{
+    border-width: 50px;
+    transform: rotateZ(360deg);
 }
